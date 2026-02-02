@@ -1,4 +1,4 @@
-package com.theInternet.core;
+package com.internet.core;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.BeforeEach;

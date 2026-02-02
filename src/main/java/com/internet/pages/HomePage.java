@@ -1,6 +1,6 @@
-package com.theInternet.pages;
+package com.internet.pages;
 
-import com.theInternet.core.BasePage;
+import com.internet.core.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
