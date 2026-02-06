@@ -1,5 +1,6 @@
 package com.internet.pages;
 
+import com.internet.contextmenu.ContextMenuPage;
 import com.internet.core.BasePage;
 import com.internet.pages.AllertsFrame.AlertsPage;
 import com.internet.pages.AllertsFrame.FramesPage;
@@ -75,4 +76,10 @@ public class HomePage extends BasePage {
     }
 
 
+    @FindBy(css = "a[href=\"/context_menu\"]")
+    WebElement contextMenu;
+    public ContextMenuPage getContextMenu() {
+        clickWithJs(contextMenu,0,300);
+        return new ContextMenuPage(driver);
+    }
 }
