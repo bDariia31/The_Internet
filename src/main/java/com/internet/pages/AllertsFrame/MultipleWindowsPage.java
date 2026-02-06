@@ -9,9 +9,9 @@ import org.openqa.selenium.support.FindBy;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MultipleWindows extends BasePage
+public class MultipleWindowsPage extends BasePage
 {
-    public MultipleWindows(WebDriver driver) {
+    public MultipleWindowsPage(WebDriver driver) {
         super(driver);
     }
 
@@ -20,12 +20,12 @@ public class MultipleWindows extends BasePage
     WebElement clickHereLink;
 
 
-    public  MultipleWindows clickHere() {
+    public MultipleWindowsPage clickHere() {
         click(clickHereLink);
         return this;
     }
 
-    public MultipleWindows switchToNewTab(int index) {
+    public MultipleWindowsPage switchToNewTab(int index) {
         List<String> tabs=new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(index));
         return this;
@@ -33,7 +33,7 @@ public class MultipleWindows extends BasePage
     @FindBy(css = "div[class='example'] h3")
     WebElement sampleHeading;
 
-    public MultipleWindows verifyClickHierTitle(String title) {
+    public MultipleWindowsPage verifyClickHierTitle(String title) {
         Assertions.assertTrue(shouldHaveText(sampleHeading,title,5));
         return  this;
     }

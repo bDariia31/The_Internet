@@ -47,8 +47,8 @@ public class AlertsPage extends BasePage {
 
     }
 
-    private boolean isContainsText(String text, WebElement element) {
-        return element.getText().contains(text);
+    protected boolean isContainsText(String text, WebElement element) {
+        return super.isContainsText(text, element);
     }
 
 
@@ -76,4 +76,6 @@ public class AlertsPage extends BasePage {
         Assertions.assertTrue(isContainsText(text,promptResult));
         return this;
     }
+
+
 }
