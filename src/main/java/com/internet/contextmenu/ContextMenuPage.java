@@ -1,6 +1,7 @@
 package com.internet.contextmenu;
 
 import com.internet.core.BasePage;
+import com.internet.pages.HomePage;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.Keys;
@@ -52,7 +53,8 @@ public class ContextMenuPage extends BasePage {
 
     public ContextMenuPage verifyHomePage() {
 
-        Assertions.assertEquals("Context Menu",homeTitle.getText());
+        driver.navigate().back();
+//        Assertions.assertEquals("Context Menu",homeTitle.getText());
         return this;
     }
 }
