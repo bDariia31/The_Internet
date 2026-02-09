@@ -54,7 +54,6 @@ public class ContextMenuPage extends BasePage {
     public ContextMenuPage verifyHomePage() {
 
         driver.navigate().back();
-//        Assertions.assertEquals("Context Menu",homeTitle.getText());
         return this;
     }
 }
