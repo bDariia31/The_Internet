@@ -1,10 +1,11 @@
 package com.internet.pages;
 
-import com.internet.contextmenu.ContextMenuPage;
 import com.internet.core.BasePage;
+import com.internet.fileUploader.FileUploaderPage;
 import com.internet.pages.AllertsFrame.AlertsPage;
 import com.internet.pages.AllertsFrame.FramesPage;
 import com.internet.pages.AllertsFrame.MultipleWindowsPage;
+import com.internet.pages.contextMenu.ContextMenuPage;
 import com.internet.pages.widgets.DragAndDropPage;
 import com.internet.pages.widgets.DropdownPage;
 import com.internet.pages.widgets.SliderPage;
@@ -13,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends BasePage {
+
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -71,15 +73,26 @@ public class HomePage extends BasePage {
     WebElement dragAndDrop;
 
     public DragAndDropPage getDragDrop() {
-        clickWithJs(dragAndDrop,0,300);
+        clickWithJs(dragAndDrop, 0, 300);
         return new DragAndDropPage(driver);
     }
 
 
     @FindBy(css = "a[href=\"/context_menu\"]")
     WebElement contextMenu;
+
     public ContextMenuPage getContextMenu() {
-        clickWithJs(contextMenu,0,300);
+        clickWithJs(contextMenu, 0, 300);
         return new ContextMenuPage(driver);
+    }
+
+    @FindBy(css = "a[href='/upload']")
+    WebElement fileUpload;
+
+    public FileUploaderPage getFileUploader() {
+
+        clickWithJs(fileUpload, 0, 400);
+
+        return new FileUploaderPage(driver);
     }
 }

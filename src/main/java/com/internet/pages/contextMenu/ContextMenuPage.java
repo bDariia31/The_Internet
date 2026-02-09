@@ -1,16 +1,12 @@
-package com.internet.contextmenu;
+package com.internet.pages.contextMenu;
 
 import com.internet.core.BasePage;
-import com.internet.pages.HomePage;
-import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-
-import javax.swing.*;
 
 public class ContextMenuPage extends BasePage {
 

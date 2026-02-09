@@ -1,12 +1,10 @@
 package com.internet.tests;
 
-import com.internet.contextmenu.ContextMenuPage;
+import com.internet.pages.contextMenu.ContextMenuPage;
 import com.internet.core.TestBase;
 import com.internet.pages.HomePage;
-import com.internet.pages.widgets.DragAndDropPage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
 
 public class ContextMenuTest extends TestBase {
 
