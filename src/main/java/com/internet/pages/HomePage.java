@@ -1,5 +1,6 @@
 package com.internet.pages;
 
+import com.internet.brokenImage.BrokenImagePage;
 import com.internet.core.BasePage;
 import com.internet.fileUploader.FileUploaderPage;
 import com.internet.pages.AllertsFrame.AlertsPage;
@@ -95,4 +96,16 @@ public class HomePage extends BasePage {
 
         return new FileUploaderPage(driver);
     }
+
+    @FindBy(css = "a[href=\"/broken_images\"]")
+    WebElement brokenImages;
+
+    public BrokenImagePage getBrokenImage() {
+        clickWithJs(brokenImages, 0, 300);
+        return new BrokenImagePage(driver);
+    }
+
+
+
+
 }

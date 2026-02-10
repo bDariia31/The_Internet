@@ -1,5 +1,7 @@
 package com.internet.core;
 
+import com.internet.brokenImage.BrokenImagePage;
+import org.assertj.core.api.SoftAssertions;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,18 +10,22 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.time.Duration;
 
-public class BasePage {
+public  class BasePage {
 
     protected static WebDriver driver;
     public static JavascriptExecutor js;
     public static Actions actions;
+    public static SoftAssertions softly;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
         js = (JavascriptExecutor) driver;
+        softly = new SoftAssertions();
         actions=new Actions(driver);
     }
 
@@ -74,4 +80,26 @@ public class BasePage {
     protected boolean isContainsText(String number, WebElement element) {
         return element.getText().contains(number);
     }
+
+
+    public void verifyLinks(String url) {
+
+        try {
+            URL linkUrl = new URL(url);
+            HttpURLConnection connection = (HttpURLConnection) linkUrl.openConnection();
+            connection.setConnectTimeout(5000);
+            connection.connect();
+            int statusCode = connection.getResponseCode();
+            if (statusCode >= 400) {
+                softly.fail(url + "--->" + connection.getResponseMessage() + "is a BROKEN link");
+            } else {
+                softly.assertThat(statusCode).isLessThan(400);
+            }
+        } catch (Exception e) {
+            softly.fail(url+"--->"+"EROOR occurred");
+        }
+
+
+    }
+
 }
