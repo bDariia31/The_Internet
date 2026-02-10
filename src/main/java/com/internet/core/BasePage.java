@@ -9,6 +9,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -20,6 +22,7 @@ public  class BasePage {
     public static JavascriptExecutor js;
     public static Actions actions;
     public static SoftAssertions softly;
+
 
     public BasePage(WebDriver driver) {
         this.driver = driver;

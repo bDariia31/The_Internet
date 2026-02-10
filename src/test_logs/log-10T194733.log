@@ -1,0 +1,2 @@
+231  [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
+237  [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.chrome.driver as /Users/dasabojko/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
