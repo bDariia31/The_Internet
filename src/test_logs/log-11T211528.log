@@ -1,0 +1,7 @@
+197  [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
+202  [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.chrome.driver as /Users/dasabojko/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
+1444 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
+1445 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.chrome.driver as /Users/dasabojko/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
+5749 [main] INFO  utils.MyTestWatcher -- The method Optional[public void com.internet.tests.SilderTest.horizontalSliderTest()] is PASSED
+5749 [main] INFO  utils.MyTestWatcher -- horizontalSliderTest()
+5749 [main] INFO  utils.MyTestWatcher -- **************************************************

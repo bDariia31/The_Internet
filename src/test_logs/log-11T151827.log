@@ -1,0 +1,8 @@
+230  [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
+236  [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.chrome.driver as /Users/dasabojko/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
+1238 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Using chromedriver 144.0.7559.133 (resolved driver for Chrome 144)
+1239 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager -- Exporting webdriver.chrome.driver as /Users/dasabojko/.cache/selenium/chromedriver/mac-arm64/144.0.7559.133/chromedriver
+4288 [main] ERROR utils.MyTestWatcher -- The method !!!Optional[public void com.internet.tests.SilderTest.horizontalSliderTest()]!!! is FAILED
+4289 [main] ERROR utils.MyTestWatcher -- horizontalSliderTest()
+4289 [main] ERROR utils.MyTestWatcher -- Driver must be set
+4289 [main] INFO  utils.MyTestWatcher -- **************************************************
